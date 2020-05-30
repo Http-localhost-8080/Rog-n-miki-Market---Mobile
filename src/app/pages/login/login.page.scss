@@ -1,0 +1,90 @@
+
+ion-content {
+  // --background: url('../../../assets/images/shopping.png') no-repeat 50% 10%;
+  --ion-background-color: #ebe8e8;
+  width: 100%;
+  height: 100%;
+}
+
+
+.header {
+  height: 25%;
+  background-color: #4a1b60;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  padding-top: 10px;
+}
+
+.header h2 {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+}
+
+.content {
+  height: 74%;
+}
+
+.footer {
+  height: 1%;
+  background-color: #4a1b60;
+}
+
+.border-white {
+  //border: white solid 4px;
+  // width: fit-content;
+  width: 100%;
+}
+
+.border-light {
+  //border: 5px solid #ffffff;
+  // width: fit-content;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  --ion-background-color: white;
+  border-radius: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.card-header{
+  font-size: 25px;
+  color: #4a1b60;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+ion-icon {
+  color: #4a1b60;
+}
+
+.ion-label {
+  text-align: right;
+  font-weight: bold;
+}
+
+.ion-button {
+  margin-bottom: 35px;
+  margin-top: 35px;
+}
+
+.ion-label-signin {
+  text-align: center;
+  color: #4a1b60;
+  margin-left: 20px;
+}
+
+.span-signup {
+  font-weight: bold;
+}
