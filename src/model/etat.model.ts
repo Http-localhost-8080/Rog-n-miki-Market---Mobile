@@ -4,13 +4,19 @@ import {IArticle} from './article.model';
 export interface IEtat {
   id?: number;
   available?: boolean;
-  type?: string;
-  frais?: number;
+  modeAcquisition?: string;
+  etatArticle?: string;
+  fraisLivraison?: number;
   articles?: IArticle[];
 }
 
 export class Etat implements IEtat {
-  constructor(public id?: number, public available?: boolean, public type?: string, public frais?: number, public articles?: IArticle[]) {
+  constructor(public id?: number,
+              public available?: boolean,
+              public modeAcquisition?: string,
+              public etatArticle?: string,
+              public fraisLivraison?: number,
+              public articles?: IArticle[]) {
     this.available = this.available || false;
   }
 }

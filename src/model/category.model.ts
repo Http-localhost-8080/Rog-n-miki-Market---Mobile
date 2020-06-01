@@ -1,8 +1,14 @@
-export class Category {
-   constructor(
-     public icon?: string,
-     public title?: string,
-     public description?: string
-   ) {
-   }
+import {IArticle} from './article.model';
+
+
+export interface ICategory {
+  id?: number;
+  icon?: string;
+  title?: string;
+  description?: string;
+  articles?: IArticle[];
+}
+
+export class Category implements ICategory {
+  constructor(public id?: number, public icon?: string, public title?: string, public description?: string, public articles?: IArticle[]) {}
 }

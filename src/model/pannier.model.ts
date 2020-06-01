@@ -6,8 +6,13 @@ export interface IPannier {
   quantite?: number;
   priceTotal?: number;
   articles?: IArticle[];
+  user?: Account;
 }
 
 export class Pannier implements IPannier {
-  constructor(public id?: number, public quantite?: number, public priceTotal?: number, public articles?: IArticle[]) {}
+  constructor(public id?: number,
+              public quantite?: number,
+              public priceTotal?: number,
+              public articles?: IArticle[],
+              public user?: Account) {}
 }
