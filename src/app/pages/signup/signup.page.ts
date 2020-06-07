@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, ToastController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
-import { UserService } from 'src/app/services/user/user.service';
 import {Router} from '@angular/router';
+import {UserService} from '../../services/user/user.service';
 
 @Component({
   selector: 'app-signup',

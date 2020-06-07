@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, ToastController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
-import { LoginService } from 'src/app/services/login/login.service';
 import {Account} from '../../../model/account.model';
 import {ToastService} from '../../services/toast.service';
 import {LoadingService} from '../../services/loading.service';
+import {LoginService} from '../../services/login/login.service';
 
 @Component({
   selector: 'app-login',

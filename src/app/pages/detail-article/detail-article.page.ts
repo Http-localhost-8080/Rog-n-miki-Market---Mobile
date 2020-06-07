@@ -3,6 +3,7 @@ import {ParameterService} from '../../services/parameter.service';
 import {Picture} from '../../../model/picture.model';
 import {AlertController} from '@ionic/angular';
 import {ToastService} from '../../services/toast.service';
+import {Article} from '../../../model/article.model';
 
 @Component({
   selector: 'app-detail-article',
@@ -10,7 +11,7 @@ import {ToastService} from '../../services/toast.service';
   styleUrls: ['./detail-article.page.scss'],
 })
 export class DetailArticlePage implements OnInit {
-  article: Picture;
+  article: Article;
   slideOpts = {
     initialSlide: 0,
     slidesPerView: 1,

@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import {Account} from '../../model/account.model';
 import {Picture} from '../../model/picture.model';
+import {Article} from '../../model/article.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ParameterService {
   private userConnected: Account;
-  private article: Picture;
+  private article: Article;
 
   constructor() { }
 

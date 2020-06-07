@@ -6,3 +6,27 @@ ion-card{
 p{
   font-weight: bold;
 }
+
+.flex {
+  display: flex;
+  font-weight: bold;
+  align-content: center;
+  color: #4a1b60;
+}
+
+.flex ion-icon {
+  margin-left: 10px;
+}
+
+.flex span {
+  margin-top: 6px;
+}
+
+.footer-row {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.header-icon {
+  margin-right: 10px;
+}

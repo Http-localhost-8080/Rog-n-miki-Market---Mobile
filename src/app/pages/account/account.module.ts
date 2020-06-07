@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { TranslateModule } from '@ngx-translate/core';
-import { UserRouteAccessService } from 'src/app/services/auth/user-route-access.service';
 import { AccountPage } from './account.page';
+import {UserRouteAccessService} from '../../services/auth/user-route-access.service';
 
 const routes: Routes = [
   {

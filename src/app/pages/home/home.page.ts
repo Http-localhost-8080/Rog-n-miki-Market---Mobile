@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {AlertController, NavController} from '@ionic/angular';
-import { AccountService } from 'src/app/services/auth/account.service';
-import { LoginService } from 'src/app/services/login/login.service';
-import { Account } from 'src/model/account.model';
 import {ApiService} from '../../services/api/api.service';
 import {ParameterService} from '../../services/parameter.service';
 import {ToastService} from '../../services/toast.service';
 import {LoadingService} from '../../services/loading.service';
-import {Article} from '../../../model/article.model';
 import {Picture} from '../../../model/picture.model';
 import {Router} from '@angular/router';
+import {Article} from '../../../model/article.model';
+import {LoginService} from '../../services/login/login.service';
+import {AccountService} from '../../services/auth/account.service';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +17,7 @@ import {Router} from '@angular/router';
 })
 export class HomePage implements OnInit {
   account: Account;
-  articles: Picture[];
+  articles: Article[];
 
   constructor(
     public navController: NavController,
@@ -34,7 +33,6 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.getAccount();
-    this.getAllPictures();
     this.getAllArticles();
   }
 
@@ -67,7 +65,7 @@ export class HomePage implements OnInit {
   }
 
   getAllArticles() {
-    this.apiService.getAllArticles().subscribe(
+    this.apiService.getArticlesWithPictures().subscribe(
       response => {
         console.log(response.body);
         this.articles = response.body;

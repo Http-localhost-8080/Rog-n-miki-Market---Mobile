@@ -2,11 +2,10 @@
   <ion-toolbar color="primary">
     <ion-back-button slot="start"></ion-back-button>
     <ion-title>
-      {{article.article.title}}
+      {{article.title}}
     </ion-title>
 
-    <ion-icon name="share-social" size="large" slot="end"></ion-icon>
-    <ion-icon name="cart" size="large" slot="end"></ion-icon>
+    <ion-icon name="share-social" size="large" slot="end" class="header-icon"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
@@ -14,40 +13,40 @@
   <ion-card>
     <ion-card-header>
       <ion-slides pager="true" mode="ios" [options]="slideOpts">
-        <ion-slide>
-          <img [src]="'data:' + article.nameContentType + ';base64,' + article.name" alt=""/>
+        <ion-slide *ngFor="let p of article.pictures">
+          <img [src]="'data:' + p.nameContentType + ';base64,' + p.name" alt=""/>
         </ion-slide>
       </ion-slides>
     </ion-card-header>
     <ion-card-content>
       <ion-chip color="danger">
         <ion-label>
-          {{article.article.category.title}}
+          {{article.category.title}}
         </ion-label>
       </ion-chip>
 
-      <!--
+
       <ion-chip color="primary">
-        <ion-label *ngIf="article.availability.available">Disponible</ion-label>
-        <ion-label *ngIf="!article.availability.available">Indisponible</ion-label>
+        <ion-label *ngIf="article.etat.available">Disponible</ion-label>
+        <ion-label *ngIf="!article.etat.available">Indisponible</ion-label>
       </ion-chip>
 
 
       <ion-chip color="primary">
-        <ion-label>{{article.availability.type}}</ion-label>
+        <ion-label>{{article.etat.modeAcquisition}}</ion-label>
       </ion-chip>
 
       <ion-chip>
-        <ion-label color="dark">{{article.state}}</ion-label>
+        <ion-label color="dark">{{article.etat.etatArticle}}</ion-label>
       </ion-chip>
 
 
       <ion-chip>
-        <ion-label color="dark">{{article.article.cities}}</ion-label>
+        <ion-label color="dark">{{article.city.name}}</ion-label>
       </ion-chip>
-      -->
+
       <p>
-        <span>Prix: {{article.article.price | number}} F CFA</span> &nbsp; &nbsp;
+        <span>Prix: {{article.price | number}} F CFA</span> &nbsp; &nbsp;
 
         <!--
         <span *ngIf="article.averageStart >=1">
@@ -69,14 +68,15 @@
       </p>
       <br>
 
-      <!--
+
       <p>
-        Frais de livraison: {{article.availability.feed | number}} F CFA
+        Frais de livraison: {{article.etat.fraisLivraison | number}} F CFA
       </p> <br>
-      -->
+
       <p>
-        {{article.article.description}}
+        {{article.description}}
       </p>
+
       <ion-grid>
         <ion-row>
           <ion-col size="9">
@@ -92,14 +92,20 @@
 </ion-content>
 
 <ion-footer>
-  <ion-row>
-    <ion-col size="10" offset="1">
-      <ion-button mode="ios"
-                  (click)="addPannier()"
-                  expand="block">
-        <ion-icon name="cart" slot="start"></ion-icon>
-        Ajouter au panier
-      </ion-button>
+  <ion-row >
+    <ion-col size="4" class="flex">
+      <ion-icon name="chatbox-ellipses" color="primary" size="large"></ion-icon>
+      <span>SMS</span>
+    </ion-col>
+
+    <ion-col size="4" class="flex">
+      <ion-icon name="mail" color="primary" size="large"></ion-icon>
+      <span>Email</span>
+    </ion-col>
+
+    <ion-col size="4" class="flex">
+      <ion-icon name="call" color="primary" size="large"></ion-icon>
+      <span>Appel</span>
     </ion-col>
   </ion-row>
 </ion-footer>

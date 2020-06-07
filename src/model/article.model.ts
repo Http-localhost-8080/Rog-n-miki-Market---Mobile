@@ -34,7 +34,7 @@ export class Article implements IArticle {
     public notes?: INote[],
     public pictures?: IPicture[],
     public city?: ICity,
-    public etats?: IEtat,
+    public etat?: IEtat,
     public users?: IUser[],
     public panniers?: IPannier[],
     public category?: ICategory

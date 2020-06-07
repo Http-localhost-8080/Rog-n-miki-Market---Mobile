@@ -2,7 +2,6 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { SessionStorageService } from 'ngx-webstorage';
 import { Observable, Subject } from 'rxjs';
-import { Account } from 'src/model/account.model';
 import { ApiService } from '../api/api.service';
 
 @Injectable({
